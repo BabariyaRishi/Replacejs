@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+    <h1>Fibonacci Series Generator</h1>
+    <p>This page demonstrates how to print the Fibonacci series up to a specified number of terms using JavaScript.</p>
+    <script>
+        function generateFibonacci(n) {
+            let first = 0, second = 1;
+            console.log(first); // Output the first number (0)
+            console.log(second); // Output the second number (1)
+            
+            for (let i = 2; i < n; i++) {
+                let next = first + second;
+                console.log(next); // Output the current Fibonacci number
+                first = second;
+                second = next;
+            }
+        }
+
+        // Display the first 4 Fibonacci numbers
+        generateFibonacci(4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Circumference Calculator</title>
+</head>
+<body>
+    <h1>Calculate the Circumference of a Rectangle</h1>
+    <p>Formula: C = 2 * (Length + Width)</p>
+
+    <script>
+        function computeRectangleCircumference(length, width) {
+            // Compute circumference using the formula: C = 2 * (Length + Width)
+            let circumference = 2 * (length + width);
+            return circumference;
+        }
+
+        // Example values:
+        let length = 6;
+        let width = 4;
+        let circumference = computeRectangleCircumference(length, width);
+
+        console.log("Length of the rectangle:", length);
+        console.log("Width of the rectangle:", width);
+        console.log("Circumference of the rectangle:", circumference);
+    </script>
+</body>
+</html>

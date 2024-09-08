@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Checker</title>
+</head>
+<body>
+    <h1>Vowel Checker Function</h1>
+    <p>
+        Below is a JavaScript function to determine if a given character is a vowel. The function uses a list of vowel characters and checks if the provided character is included in that list.
+    </p>
+
+    <h2>Check the console for examples and script</h2>
+    <script>
+        function isVowel(char) {
+            var lowerChar = char.toLowerCase();
+            
+            // Define an array of vowels
+            var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+            // Check if the character is in the array of vowels
+            return vowels.includes(lowerChar);
+        }
+
+        // Example usage:
+        console.log(isVowel('a'));  // Output: true
+        console.log(isVowel('e'));  // Output: true
+        console.log(isVowel('z'));  // Output: false
+    </script>
+</body>
+</html>

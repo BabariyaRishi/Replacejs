@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Conversion</title>
+</head>
+<body>
+    <h1>Convert Between Years and Days</h1>
+    <script>
+        // Convert years to days
+        function convertYearsToDays(yearCount) {
+            const daysInYear = 365;
+            return yearCount * daysInYear;
+        }
+
+        // Convert days to years
+        function convertDaysToYears(dayCount) {
+            const daysInYear = 365;
+            return dayCount / daysInYear;
+        }
+
+        // Example values
+        const exampleYears = 3;
+        const exampleDays = 1095; // Equivalent to 3 years
+
+        console.log(`${exampleYears} years is equal to ${convertYearsToDays(exampleYears)} days.`);
+        console.log(`${exampleDays} days is equal to ${convertDaysToYears(exampleDays)} years.`);
+    </script>
+</body>
+</html>

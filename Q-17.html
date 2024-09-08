@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Expression Evaluation</title>
+</head>
+<body>
+    <h1>Evaluating the Expression: true && false || false && true</h1>
+
+    <p>
+        To determine the result of the logical expression <code>true && false || false && true</code>, we need to understand how logical operators work.
+    </p>
+    
+    <p>
+        The <strong>AND</strong> operator (<code>&&</code>) returns <code>true</code> only if both operands are <code>true</code>. Otherwise, it returns <code>false</code>.
+    </p>
+    
+    <p>
+        The <strong>OR</strong> operator (<code>||</code>) returns <code>true</code> if at least one of the operands is <code>true</code>. If both are <code>false</code>, it returns <code>false</code>.
+    </p>
+
+    <h2>Result</h2>
+    <p>
+        Evaluating the expression step-by-step:
+        <ul>
+            <li><code>true && false</code> evaluates to <code>false</code></li>
+            <li><code>false && true</code> evaluates to <code>false</code></li>
+            <li>Therefore, <code>false || false</code> evaluates to <code>false</code></li>
+        </ul>
+        Hence, the final result of the expression is <mark>false</mark>.
+    </p>
+
+    <script>
+        console.log(true && false || false && true);
+    </script>
+
+</body>
+</html>

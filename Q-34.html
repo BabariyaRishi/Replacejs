@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Reversal Example</title>
+</head>
+<body>
+    <h1> JavaScript Code to Reverse a Number </h1>
+    <p>
+        Given a number, such as 64728, this script reverses the digits to produce 82746.
+    </p>
+    <h2>
+        Check the results in the browser console
+    </h2>
+
+    <script>
+        function reverseNumber(number) {
+            // Convert number to string, split into characters, reverse the array, join back to string, and convert to number
+            let reversedString = number.toString().split('').reverse().join('');
+            let reversedNumber = parseInt(reversedString);
+            return reversedNumber;
+        }
+
+        // Example usage
+        let number = 64728;
+        let reversed = reverseNumber(number);
+        console.log("Original number:", number);
+        console.log("Reversed number:", reversed);
+    </script>
+</body>
+</html>

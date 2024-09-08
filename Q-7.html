@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Check</title>
+</head>
+<body>
+    <h1>Is the string '20' strictly equal to the number 20?</h1>
+    <h2>Check the console for the result</h2>
+
+    <code>
+        var x = 20;
+        var y = "20";
+        console.log(x === y);
+        console.log(x === parseInt(y));
+    </code>
+
+    <script>
+        var x = 20;
+        var y = "20";
+        console.log(x === y); // false
+        console.log(x === parseInt(y)); // true
+    </script>
+</body>
+</html>

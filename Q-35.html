@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Summation</title>
+</head>
+<body>
+    <h1>Calculate the Sum of Digits in a Number</h1>
+    <h2>Check the result in the console</h2>
+    <script>
+        function calculateDigitSum(num) {
+            let numStr = num.toString();
+            let total = 0;
+
+            for (let i = 0; i < numStr.length; i++) {
+                total += parseInt(numStr[i]);
+            }
+
+            return total;
+        }
+
+        // Example:
+        let exampleNumber = 1523;
+        let result = calculateDigitSum(exampleNumber);
+        console.log("Original number:", exampleNumber);
+        console.log("Sum of digits:", result);
+    </script>
+</body>
+</html>

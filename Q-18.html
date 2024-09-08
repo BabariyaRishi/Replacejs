@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-18</title>
+</head>
+<body>
+    <h1>Understanding Loops and Switch Cases in JavaScript</h1>
+
+    <section>
+        <h2>Loops in JavaScript</h2>
+        <p>
+            JavaScript provides various types of loops to execute a block of code multiple times efficiently. A loop continues to run as long as its condition remains true.
+        </p>
+        <p>
+            For instance, if you need to display “Hello World” five times, you can use a loop to achieve this with minimal code. The loop structure ensures that the code is executed repeatedly without redundancy:
+        </p>
+        <pre>
+            &lt;script&gt;
+            <br />
+            for (let i = 0; i &lt; 5; i++) { <br />
+            console.log("Hello World!"); } <br />
+            &lt;/script&gt;
+        </pre>
+        <p><strong>Output:</strong></p>
+        <ul>
+            <li>Hello World!</li>
+            <li>Hello World!</li>
+            <li>Hello World!</li>
+            <li>Hello World!</li>
+            <li>Hello World!</li>
+        </ul>
+        <h3>Different Types of Loops</h3>
+        <ul>
+            <li>for Loop</li>
+            <li>while Loop</li>
+            <li>do-while Loop</li>
+            <li>for-in Loop</li>
+            <li>for-of Loop</li>
+            <li>Labeled Statement</li>
+            <li>Break Statement</li>
+            <li>Continue Statement</li>
+            <li>Infinite Loop (Error)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Switch Statement in JavaScript</h2>
+        <p>
+            The switch statement offers a streamlined way to execute different code blocks based on varying conditions, serving as an alternative to multiple if...else if...else statements.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <pre>
+            switch (expression) { <br />
+            case value1: <br />
+            // code block 1; <br />
+            break; <br />
+            case value2: <br />
+            // code block 2; <br />
+            break; <br />
+            ... <br />
+            default: <br />
+            // default code block; <br />
+            }
+        </pre>
+        <ul>
+            <li>The <code>expression</code> is the value being compared.</li>
+            <li><code>case value1</code>, <code>case value2</code>, etc., are possible matches for the expression.</li>
+            <li>The <code>break</code> statement exits the switch statement, preventing the execution from falling through to subsequent cases.</li>
+            <li>The <code>default</code> case is optional and runs if no cases match the expression.</li>
+        </ul>
+        <h3>How the Switch Statement Functions</h3>
+        <ul>
+            <li><strong>Evaluation:</strong> The switch expression is evaluated once.</li>
+            <li><strong>Comparison:</strong> The evaluated expression is compared with each case label using strict equality (===).</li>
+            <li><strong>Execution:</strong> When a match is found, the corresponding code block is executed. If no match is found, the default case (if present) or the code after the switch block executes.</li>
+            <li><strong>Break Statement:</strong> The break statement terminates the switch case, stopping the execution from proceeding to the next case unless the break is omitted (fall-through).</li>
+            <li><strong>Default Case:</strong> The default case runs if none of the other cases match the expression.</li>
+        </ul>
+    </section>
+</body>
+</html>

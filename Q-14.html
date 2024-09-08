@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Extension Finder</title>
+</head>
+<body>
+    <h1>JavaScript Exercise: Determine the File Extension</h1>
+
+    <script>
+        function findExtension(fileName) {
+            // Find the position of the last dot
+            const lastDotIndex = fileName.lastIndexOf(".");
+
+            // If there's no dot or the dot is at the end, return an empty string
+            if (lastDotIndex === -1 || lastDotIndex === fileName.length - 1) {
+                return "";
+            }
+
+            // Extract the file extension
+            const extension = fileName.slice(lastDotIndex + 1);
+            return extension;
+        }
+
+        // Test cases
+        const file1 = "report.docx";
+        const file2 = "presentation.pptx";
+
+        console.log(`File extension of '${file1}': ${findExtension(file1)}`);
+        console.log(`File extension of '${file2}': ${findExtension(file2)}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0e0e0;
+            padding: 30px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            max-width: 350px;
+            margin: auto;
+        }
+        .form-container label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container input[type="tel"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .error-message {
+            color: #d9534f;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="userForm" onsubmit="return validateUserForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        function validateUserForm() {
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const password = document.getElementById("password").value;
+            
+            let isFormValid = true;
+            
+            if (username === "") {
+                showError("Please enter a username.");
+                isFormValid = false;
+            }
+            
+            if (email === "") {
+                showError("Please provide an email address.");
+                isFormValid = false;
+            } else if (!validateEmail(email)) {
+                showError("The email address format is incorrect.");
+                isFormValid = false;
+            }
+            
+            if (phone === "") {
+                showError("Please enter a phone number.");
+                isFormValid = false;
+            } else if (!validatePhoneNumber(phone)) {
+                showError("Phone number must be in the format: 123-456-7890.");
+                isFormValid = false;
+            }
+            
+            if (password.length < 8) {
+                showError("Password must be at least 8 characters.");
+                isFormValid = false;
+            }
+            
+            return isFormValid;
+        }
+        
+        function validateEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+        
+        function validatePhoneNumber(phone) {
+            const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+            return phonePattern.test(phone);
+        }
+        
+        function showError(message) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>

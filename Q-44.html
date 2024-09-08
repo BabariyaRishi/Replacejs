@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize First Letter</title>
+</head>
+<body>
+    <h1>JavaScript Function to Capitalize First Letter</h1>
+    <h2>Check the console for the result</h2>
+<script>
+    function capitalizeInitial(str) {
+        return str.charAt(0).toUpperCase() + str.substring(1);
+    }
+
+// Example usage:
+let sampleText = "example text";
+let resultText = capitalizeInitial(sampleText);
+
+console.log(resultText);  // Output: "Example text"
+
+</script>
+</body>
+</html>

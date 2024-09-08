@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Number Parity</title>
+</head>
+<body>
+    <h1>
+        Determine if a number is even or odd using JavaScript
+    </h1>
+    <h2>
+        Check the results in the console
+    </h2>
+    <script>
+        function checkParity(num) {
+            const outcome = (num % 2 === 0) ? "Even" : "Odd";
+            return outcome;
+        }
+
+        // Examples:
+        console.log(checkParity(4));   // Output: "Even"
+        console.log(checkParity(7));   // Output: "Odd"
+        console.log(checkParity(-2));  // Output: "Even"
+        console.log(checkParity(0));   // Output: "Even"
+    </script>
+</body>
+</html>

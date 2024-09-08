@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area Calculator</title>
+</head>
+<body>
+    <h1>JavaScript Program to Calculate the Area of a Triangle</h1>
+
+    <script>
+        function getTriangleArea(baseLength, triangleHeight) {
+            // Formula: Area = 1/2 * base * height
+            let triangleArea = 0.5 * baseLength * triangleHeight;
+            return triangleArea;
+        }
+
+        // Variables representing the triangle's dimensions
+        let baseLength = 5;
+        let triangleHeight = 8;
+        let triangleArea = getTriangleArea(baseLength, triangleHeight);
+
+        // Logging the results
+        console.log("Triangle Base:", baseLength);
+        console.log("Triangle Height:", triangleHeight);
+        console.log("Triangle Area:", triangleArea);
+    </script>
+</body>
+</html>

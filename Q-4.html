@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Multiplication Function</title>
+</head>
+<body>
+    <h1>Create a Multi-Level Multiplication Function</h1>
+    <p>This function allows us to multiply three numbers using a series of nested function calls. Each function takes one argument, and the result is obtained by multiplying all three values together.</p>
+
+    <h2>Example of Use</h2>
+    <p>The first function accepts the number <strong>X</strong>, the second one takes <strong>Y</strong>, and the final one receives <strong>Z</strong>. The result of the function will be <code>X * Y * Z</code>.</p>
+
+    <h2>Function Implementation</h2>
+    <code>
+        function multiply(X) {<br>
+        &nbsp;&nbsp;return function(Y) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return function(Z) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return X * Y * Z;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+        &nbsp;&nbsp;};<br>
+        }<br><br>
+
+        <h2>Expected Output</h2>
+        console.log(multiply(2)(4)(5)); // Output: 40<br>
+        console.log(multiply(12)(7)(11)); // Output: 924<br>
+    </code>
+
+    <script>
+        function multiply(X) {
+            return function(Y) {
+                return function(Z) {
+                    return X * Y * Z;
+                };
+            };
+        }
+
+        console.log(multiply(2)(4)(5));
+        console.log(multiply(12)(7)(11));
+    </script>
+</body>
+</html>

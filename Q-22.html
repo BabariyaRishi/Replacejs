@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Check</title>
+</head>
+<body>
+    <h1>Determine If a Number is Positive, Negative, or Zero in JavaScript</h1>
+    <p>
+        This example demonstrates how to check if a number is positive, negative, or zero using JavaScript. The code below utilizes simple conditional statements to determine the result.
+    </p>
+    <h2>Refer to the console and script below for the implementation</h2>
+    <script>
+        function determineNumberType(number) {
+            if (number > 0) {
+                return "Positive";
+            } else if (number < 0) {
+                return "Negative";
+            } else if (number === 0) {
+                return "Zero";
+            }
+        }
+
+        // Examples:
+        console.log(determineNumberType(0));   // Output: "Zero"
+        console.log(determineNumberType(-5));  // Output: "Negative"
+    </script>
+</body>
+</html>
